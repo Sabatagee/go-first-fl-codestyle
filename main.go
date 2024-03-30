@@ -25,9 +25,11 @@ func attack(charName, charClass string) string {
 func defence(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(5, 10))
-	}  if charClass == "mage" {
+	}
+	if charClass == "mage" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(-2, 2))
-	}  if charClass == "healer" {
+	}
+	if charClass == "healer" {
 		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(2, 5))
 	}
 	return "неизвестный класс персонажа"
@@ -37,9 +39,11 @@ func defence(charName, charClass string) string {
 func special(charName, charClass string) string {
 	if charClass == "warrior" {
 		return fmt.Sprintf("%s применил специальное умение `Выносливость %d`", charName, 80+25)
-	}  if charClass == "mage" {
+	}
+	if charClass == "mage" {
 		return fmt.Sprintf("%s применил специальное умение `Атака %d`", charName, 5+40)
-	}  if charClass == "healer" {
+	}
+	if charClass == "healer" {
 		return fmt.Sprintf("%s применил специальное умение `Защита %d`", charName, 10+30)
 	}
 	return "неизвестный класс персонажа"
@@ -75,11 +79,11 @@ func startTraining(charName, charClass string) string {
 		}
 
 		if cmd == "defence" {
-			fmt.Println(defence(char_name, char_class))
+			fmt.Println(defence(charName, charClass))
 		}
 
 		if cmd == "special" {
-			fmt.Println(special(char_name, char_class))
+			fmt.Println(special(charName, charClass))
 		}
 	}
 
